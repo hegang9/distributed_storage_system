@@ -1,0 +1,10 @@
+
+!bin/test.conf
+.idea
+bin
+cmake-build-debug
+lib
+build
+
+*.out
+*.a

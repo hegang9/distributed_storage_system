@@ -1,0 +1,32 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/src/common/include",
+                "${workspaceFolder}/src/fiber/include",
+                "${workspaceFolder}/src/rpc/include",
+                "${workspaceFolder}/src/raftCore/include",
+                "${workspaceFolder}/src/raftRpcPro/include",
+                "${workspaceFolder}/src/raftClerk/include",
+                "${workspaceFolder}/src/skipList/include",
+                "${workspaceFolder}/example",
+                "/usr/include",
+                "/usr/local/include",
+                "/usr/include/google/protobuf"
+            ],
+            "defines": [
+                "PROTOBUF_USE_DLLS",
+                "PROTOBUF_INLINE_NOT_IN_HEADERS=0"
+            ],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c17",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "linux-gcc-x64",
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json",
+            "configurationProvider": "ms-vscode.cmake-tools"
+        }
+    ],
+    "version": 4
+}

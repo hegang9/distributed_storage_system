@@ -1,0 +1,27 @@
+{
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "C_Cpp.intelliSenseEngine": "default",
+    "C_Cpp.errorSquiggles": "enabled",
+    "editor.hover.enabled": "on",
+    "editor.hover.delay": 300,
+    "C_Cpp.autocomplete": "default",
+    "cmake.configureOnOpen": true,
+    "C_Cpp.dimInactiveRegions": true,
+    "C_Cpp.inactiveRegionOpacity": 0.35,
+    "files.exclude": {
+        "**/*.pb.h": false
+    },
+    "C_Cpp.exclusionPolicy": "checkFilesystem",
+    "C_Cpp.intelliSenseEngineFallback": "enabled",
+    "C_Cpp.default.browse.limitSymbolsToIncludedHeaders": false,
+    "problems.autoReveal": true,
+    "C_Cpp.loggingLevel": "Warning",
+    "files.associations": {
+        "*.pb.h": "cpp",
+        "*.pb.cc": "cpp"
+    },
+    "C_Cpp.codeAnalysis.exclude": {
+        "**/*.pb.h": true,
+        "**/*.pb.cc": true
+    }
+}
