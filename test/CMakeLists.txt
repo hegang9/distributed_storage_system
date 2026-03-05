@@ -1,0 +1,8 @@
+add_executable(benchmark_skiplist benchmark_skiplist.cpp)
+
+add_executable(benchmark_coro_server benchmark_coro_server.cpp)
+target_link_libraries(benchmark_coro_server fiber_lib pthread)
+
+add_executable(benchmark_thread_server benchmark_thread_server.cpp)
+target_link_libraries(benchmark_thread_server pthread)
+target_link_libraries(benchmark_skiplist pthread boost_serialization)
