@@ -1,6 +1,3 @@
-//
-// Created by swx on 23-12-28.
-//
 // RaftRpcUtil：Raft 节点间 RPC 通信封装
 // 封装 protobuf 生成的 raftRpc_Stub，提供三个核心 RPC：
 //   1) AppendEntries：日志复制 / 心跳

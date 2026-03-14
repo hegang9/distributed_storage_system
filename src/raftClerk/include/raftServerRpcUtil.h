@@ -1,11 +1,3 @@
-//
-// Created by swx on 24-1-4.
-//
-// raftServerRpcUtil: Clerk 端与 KvServer 之间的 RPC 通信工具类
-// 封装了 protobuf 生成的 kvServerRpc_Stub，提供 Get 和 PutAppend 两个 RPC 调用接口
-// 注意：这是 Clerk（客户端）端使用的，只需要 caller（调用方）功能，不需要 callee（被调用方）功能
-//
-
 #ifndef RAFTSERVERRPC_H
 #define RAFTSERVERRPC_H
 

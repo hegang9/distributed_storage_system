@@ -1,6 +1,3 @@
-//
-// Created by swx on 24-1-4.
-//
 #include "raftServerRpcUtil.h"
 
 // 构造函数：创建到指定 KvServer 节点的 RPC 连接

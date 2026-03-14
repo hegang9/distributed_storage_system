@@ -1,6 +1,3 @@
-//
-// Created by swx on 23-5-30.
-//
 // Persister：Raft 状态持久化组件
 // 负责将 Raft 的核心状态（currentTerm、votedFor、logs、快照元信息）和快照数据落盘
 // 保障节点崩溃或重启后可恢复一致性状态
