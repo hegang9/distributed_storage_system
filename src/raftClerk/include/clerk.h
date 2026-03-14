@@ -1,11 +1,3 @@
-//
-// Created by swx on 23-6-4.
-//
-// Clerk 是 KV 存储系统的客户端类
-// 负责向 KvServer 集群发送 Get/Put/Append 请求
-// Clerk 自动处理 leader 切换和请求重试，对上层调用者屏蔽分布式细节
-//
-
 #ifndef SKIP_LIST_ON_RAFT_CLERK_H
 #define SKIP_LIST_ON_RAFT_CLERK_H
 #include <arpa/inet.h>
