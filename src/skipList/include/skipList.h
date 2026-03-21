@@ -662,7 +662,7 @@ SkipList<K, V>::~SkipList() {
     _file_reader.close();
   }
 
-  // 递归删除跳表中的所有节点(从第0层的第一个节点开始)
+  // 删除跳表中的所有节点(从第0层的第一个节点开始)
   if (_header->forward[0] != nullptr) {
     clear(_header->forward[0]);
   }
@@ -671,12 +671,16 @@ SkipList<K, V>::~SkipList() {
 }
 
 /**
- * @brief 递归删除节点
+ * @brief 删除节点
  * @param cur 当前要删除的节点
  *
- * 采用后序遍历的方式递归删除:
+ * 原始实现采用后序遍历的方式递归删除（容易导致栈溢出）:
  * 1. 先递归删除后续节点
  * 2. 再删除当前节点
+ *
+ * 当前修改为迭代方式删除,避免递归深度过大导致栈溢出:
+ * 1. 从当前节点开始,使用循环迭代删除每个节点
+ * 2. 每次删除当前节点后,移动到下一个节点继续删除
  */
 template <typename K, typename V>
 void SkipList<K, V>::clear(Node<K, V> *cur) {
@@ -711,5 +715,4 @@ int SkipList<K, V>::get_random_level() {
   }
   return k;
 };
-// vim: et tw=100 ts=4 sw=4 cc=120
 #endif  // SKIPLIST_H
