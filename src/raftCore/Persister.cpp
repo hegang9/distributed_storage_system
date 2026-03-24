@@ -9,6 +9,10 @@ void Persister::Save(const std::string raftstate, const std::string snapshot) {
   // 将raftstate和snapshot写入本地文件
   m_raftStateOutStream << raftstate;
   m_snapshotOutStream << snapshot;
+
+  // 必须显式flush，否则数据只停留在C++运行时缓冲区，进程崩溃会导致Raft状态丢失
+  m_raftStateOutStream.flush();
+  m_snapshotOutStream.flush();
 }
 
 // 读取 snapshot 数据
@@ -37,6 +41,7 @@ void Persister::SaveRaftState(const std::string &data) {
   // 将raftstate和snapshot写入本地文件
   clearRaftState();
   m_raftStateOutStream << data;
+  m_raftStateOutStream.flush();  // 强制刷盘，保证严格的预写式日志(WAL)语义
   m_raftStateSize += data.size();
 }
 

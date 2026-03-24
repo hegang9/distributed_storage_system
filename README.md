@@ -41,6 +41,36 @@ make -j4
 
 编译完成后，相关可执行文件及测试程序将生成在 `bin/` 目录下。
 
+### 运行指令
+```bash
+cd /home/hegang/DistributedStorage/bin
+./raftCoreRun -n 3 -f test.conf
+```
+
+跳表存储引擎性能测试：
+```bash
+cd /home/hegang/DistributedStorage/bin
+./benchmark_skiplist
+```
+
+高性能协程服务器压测
+```bash
+cd /home/hegang/DistributedStorage/bin
+./benchmark_coro_server
+```
+
+传统线程服务器压测
+```bash
+cd /home/hegang/DistributedStorage/bin
+./benchmark_thread_server
+```
+
+客户端
+```bash
+cd /home/hegang/DistributedStorage/bin
+./callerMain
+```
+
 ## 📂 测试说明
 
 在 `bin/` 目录下包含了多个测试程序，包括协程基准测试、IOManager 测试、SkipList 性能测试等，可以通过以下方式运行：
